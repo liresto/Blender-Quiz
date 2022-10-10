@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Boston Trivia</title>
+</head>
+<body>
+        <h1> Blender Quiz</h1>
+        <p>
+            <i>Do you know the answers to these Blender related questions? </i>
+        </p>
+
+        <ol>
+            <li><p>What is this space considered?</p></li>
+            <img src="./images/liminal_space_2.png" width="300" 
+            height="400" alt= "Pink tiled structure with large empty pools">
+            <p>
+                <label>
+                    <input id="correct1" type="radio" name="question1">Liminal
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question1">Cottage Core
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="radio" name="question1"> Dark Academia
+                </label>
+            </p>
+                
+            <li><p> "_____ ______" is a shading and rendering technique used to calculate how exposed each point in a scene is to ambient lighting</p></li>
+           
+            <p>
+                <label>
+                    <input type="radio" name="question2"> Ray Tracing
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input id="correct2" type="radio" name="question2"> Ambient Occlusion
+                </label>
+            </p>
+            <p> 
+                <label>
+                    <input type="radio" name="question2"> Area lighting
+                </label>
+            </p>
+            <li><p> Which of the following icons would you select to add a modifier to an object?</p></li>
+            <p>
+                <label>
+                    <input type="radio" name="question3"> <img src="./images/q3_1.png" alt="blue circle with 3 extruding lines with circle tips">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question3"> <img src="./images/q3_2.png" alt="green triangle with squares for corners">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question3" id=correct3> <img src="./images/q3_3.png" alt = "blue wrench">
+                </label>
+            </p>
+            <li><p> If I wanted to scale, rotate, then move this image, what shortcuts would I use in order?</p></li>
+            <p>
+                <label>
+                    <input type="radio" name="question4"> S, R, M
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question4" id="correct4"> S, R, G
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question4"> Y, W, G
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="question4"> Middle mouse button, Scroll wheel, Left click
+                </label>
+            </p>
+            
+        </ol>
+
+    <input type="submit" name="submit" value="Submit Blender Quiz" onClick="result()">
+<script type="text/javascript">
+    function result()
+    {
+        var score=0;
+        if(document.getElementById('correct1').checked)
+            {	
+                score++;
+            }
+        if(document.getElementById('correct2').checked)
+            {	
+                score++;
+            }
+        if(document.getElementById('correct3').checked)
+            {	
+                score++;
+            }
+        if(document.getElementById('correct4').checked)
+            {
+                score++;
+            }
+        if(score == 4)
+            {
+            alert("Hooray, you got them all right!")
+            }
+        else
+            {
+            alert("Your score is:" + score);
+            }
+    }
+</script>
+        <h3>Finished!</h3>
+        <a href="./answers.html">See answer key</a>
+
+        
+</body>
+</html>
